@@ -7,7 +7,7 @@ a1 = Input(32,"a1")# pc value calculated in execute stage
 npc = Output(32, "npc")
 #value from execute stage
 sel = Input(1)
-npc <<= select(sel=1,truecase = a1,falsecase=a0)
+npc <<= select(sel=0,truecase = a1,falsecase=a0)
 
 #return npc or nex
 

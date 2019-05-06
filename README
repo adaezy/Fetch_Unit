@@ -1,0 +1,10 @@
+CSCI 674 Project
+This Project is SIMD FETCH UNIT Using PyRTL
+# Run fetch.py for the Simple Fetch Unit
+# Run fetch_simd.py for the SIMD Fetch Unit
+# Run fetch_pipelined for the SIMD_Pipelined Unit.
+
+
+
+#Acknowlegement
+Some codes are gotten from the PyRTL project at https://github.com/UCSBarchlab/PyRTL

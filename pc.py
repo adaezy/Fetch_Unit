@@ -4,22 +4,35 @@ import random
 
 
 
-def pc():
-    npc = Input(32, 'npc')
+class PC():
+    first_state= Input(1,'fs')
+    next_state = Input(1,'ns')
+    global npc
+    global newvalue_pc
+    npc = Input(32,'npc')
+    global pcvalue
     pcvalue = Register(32, 'pcvalue')
     pc_output =Output(32,'pc_output')
-    #pcvalue <<=wire_pcvalue
-    #set the initial program count as 0
-    pcvalue.next <<= npc
+    #value = Output(32,'pc_out')
+    try:
+        with pyrtl.conditional_assignment:
+            with first_state:  # signal of highest precedence
+                pcvalue.next |= npc
+            with next_state:  # if token received, advance state in counter sequence
+                pcvalue.next |= newvalue_pc
+    except NameError as e:
+        pass
+    else:
+        pcvalue.next |= npc
     pc_output <<= pcvalue
-    sim_trace = SimulationTrace()#
-    sim= Simulation(tracer = sim_trace)
-    for cycle in range(15):
-        sim.step({'npc': random.choice([0, 1])
-        })
-    sim_trace.render_trace(symbol_len=5, segment_size=5)
 
-pc()
+#Define 4 program counters
+pc1 = PC()
+pc2 = PC()
+pc3 = PC()
+pc4 = PC()
+
+
 
 
 # # def pc():
