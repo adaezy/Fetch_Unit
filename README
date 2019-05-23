@@ -1,4 +1,4 @@
-CSCI 674 Project
+
 This Project is SIMD FETCH UNIT Using PyRTL
 # Run fetch.py for the Simple Fetch Unit
 # Run fetch_simd.py for the SIMD Fetch Unit
