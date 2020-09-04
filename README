@@ -6,5 +6,6 @@ This Project is SIMD FETCH UNIT Using PyRTL
 
 
 
-#Acknowlegement
-PyRTL project at https://github.com/UCSBarchlab/PyRTL
+Acknowlegement
+PyRTL Documentation: https://pyrtl.readthedocs.io/en/stable/core.html
+PyRTL Development at https://github.com/UCSBarchlab/PyRTL
